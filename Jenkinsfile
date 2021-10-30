@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    agent none
+    agent any
 
     tools{
     maven 'Maven'
@@ -33,6 +33,16 @@ pipeline {
                 }
             }
         }
+        stage('deploy') {
+            steps {
+                script {
+                    echo "Deploying the application..."
+                }
+            }
+        }
+    }
+}
+
         stage('deploy') {
             steps {
                 script {
