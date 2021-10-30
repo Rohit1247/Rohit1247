@@ -7,10 +7,11 @@ pipeline {
     maven 'Maven'
     }
     stages {
-        stage('build') {
+        stage('build jar') {
             steps {
                 script {
                     echo "Building the application..."
+                    sh 'mvn package'
                 }
             }
         }
