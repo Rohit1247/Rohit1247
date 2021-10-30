@@ -41,14 +41,4 @@ pipeline {
             }
         }
     }
-}
 
-        stage('deploy') {
-            steps {
-                script {
-                    echo "Deploying the application..."
-                }
-            }
-        }
-    }
-}
