@@ -22,7 +22,7 @@ pipeline {
                             sh 'docker build -t rohit1247/newimage:jma2.0 .'
                             sh "echo $PASS | docker login -u $USER --password-stdin"
                             sh 'docker push rohit1247/newimage:jma2.0'
-                            }  
+                            }
                         }
                     }
                 }
